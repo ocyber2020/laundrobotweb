@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AVTool Support | Intellicue</title>
+<meta name="description" content="Help, troubleshooting, and contact information for AVTool.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ocybersecurity.com/avtoolsupport.html">
+
+<!-- Bootstrap 5.3 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#101820;
+    --ink-2:#1d2833;
+    --paper:#fbfaf7;
+    --rule:#dcd8d0;
+    --muted:#5b6670;
+    --signal:#b8860b;
+    --signal-soft:#fdf6e3;
+    --flag:#fff3cd;
+  }
+
+  body{
+    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-size:1.0625rem;
+    line-height:1.7;
+  }
+
+  /* ---------- header band ---------- */
+  .doc-head{ background:var(--ink); color:#fff; }
+  .doc-eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.75rem; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--signal);
+  }
+  .doc-head h1{ font-weight:700; letter-spacing:-.02em; }
+  .doc-meta{
+    font-family:"IBM Plex Mono",monospace; font-size:.8125rem;
+    color:#9aa5ae; border-top:1px solid #2b3742; padding-top:1rem;
+  }
+  .doc-meta strong{ color:#fff; font-weight:500; }
+
+  /* ---------- section headings ---------- */
+  .doc-body section{ scroll-margin-top:1.5rem; padding-bottom:3rem; }
+  .doc-body h2{
+    font-size:1.375rem; font-weight:600; letter-spacing:-.01em;
+    padding-bottom:.5rem; margin-bottom:1.25rem;
+    border-bottom:1px solid var(--rule);
+  }
+  .doc-body h2 .sec-no{
+    font-family:"IBM Plex Mono",monospace; font-size:.875rem;
+    color:var(--signal); margin-right:.6rem; font-weight:500;
+  }
+  .doc-body h3{ font-size:1.0625rem; font-weight:600; margin:1.5rem 0 .5rem; }
+  .doc-body li{ margin-bottom:.4rem; }
+
+  /* ---------- contact cards ---------- */
+  .card-contact{
+    background:#fff; border:1px solid var(--rule); border-radius:6px;
+    padding:1.5rem; height:100%;
+    transition:border-color .15s ease;
+  }
+  .card-contact:hover{ border-color:var(--signal); }
+  .card-contact .label{
+    font-family:"IBM Plex Mono",monospace; font-size:.72rem;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--signal);
+    display:block; margin-bottom:.5rem;
+  }
+  .card-contact h3{ font-size:1.0625rem; font-weight:600; margin:0 0 .4rem; }
+  .card-contact p{ font-size:.9375rem; color:var(--muted); margin-bottom:.9rem; }
+  .card-contact a.action{
+    font-family:"IBM Plex Mono",monospace; font-size:.875rem;
+    text-decoration:none; font-weight:500;
+  }
+  .card-contact a.action:hover{ text-decoration:underline; }
+
+  /* ---------- accordion ---------- */
+  .accordion-item{ background:transparent; border:0; border-bottom:1px solid var(--rule); }
+  .accordion-button{
+    background:transparent; font-weight:600; font-size:1rem;
+    padding:1.1rem 0; box-shadow:none !important;
+  }
+  .accordion-button:not(.collapsed){ background:transparent; color:var(--ink); }
+  .accordion-button::after{ margin-left:auto; }
+  .accordion-body{ padding:0 0 1.25rem; font-size:.9375rem; }
+
+  /* ---------- misc ---------- */
+  .callout{
+    background:var(--signal-soft);
+    border-left:3px solid var(--signal);
+    padding:1rem 1.25rem; margin:1.5rem 0;
+    font-size:.9375rem;
+  }
+  .spec-table th{
+    font-family:"IBM Plex Mono",monospace; font-size:.75rem;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+    font-weight:500; white-space:nowrap; width:38%;
+  }
+  .spec-table td{ font-size:.9375rem; }
+
+  /* Placeholder markers — highlight off for publication.
+     Spans remain in the markup so unverified content is greppable:
+     search class="todo". To re-enable while editing, restore:
+       background:var(--flag); padding:.05rem .3rem; border-radius:2px;   */
+  .todo{ background:none; padding:0; box-shadow:none; }
+
+  a{ color:#0b5d8f; text-underline-offset:2px; }
+  footer{ background:var(--ink-2); color:#9aa5ae; font-size:.875rem; }
+  footer a{ color:#cbd3da; }
+
+  @media (prefers-reduced-motion:reduce){ *{ scroll-behavior:auto !important; } }
+</style>
+</head>
+
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="doc-head py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <p class="doc-eyebrow mb-2">AVTool &middot; Support</p>
+        <h1 class="display-6 mb-3">Support</h1>
+        <p class="lead text-white-50 mb-4" style="max-width:44rem;">
+          Answers to common questions, troubleshooting steps, and a direct line to a human
+          when those aren't enough.
+        </p>
+        <div class="doc-meta row g-3">
+          <div class="col-sm-4">Current version <strong class="todo">1.0</strong></div>
+          <div class="col-sm-4">Requires <strong class="todo">iOS 16.0 or later</strong></div>
+          <div class="col-sm-4">Updated <strong>26 August 2026</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 doc-body">
+
+      <!-- 01 CONTACT -->
+      <section id="contact">
+        <h2><span class="sec-no">01</span>Get in touch</h2>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card-contact">
+              <span class="label">General</span>
+              <h3>Support</h3>
+              <p>Questions about using AVTool, billing, or your account.</p>
+              <a class="action" href="mailto:support@ocybersecurity.com">support@ocybersecurity.com</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-contact">
+              <span class="label">Defects</span>
+              <h3>Report a bug</h3>
+              <p>Something crashed, hung, or produced the wrong result.</p>
+              <a class="action" href="mailto:support@ocybersecurity.com?subject=AVTool%20bug%20report">Send a bug report</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-contact">
+              <span class="label">Disclosure</span>
+              <h3>Security issue</h3>
+              <p>Found a vulnerability? Report it privately and we'll respond first.</p>
+              <a class="action" href="mailto:security@ocybersecurity.com">security@ocybersecurity.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout mt-4">
+          We reply within <span class="todo">one business day</span>, Monday to Friday. Security
+          reports are acknowledged within <span class="todo">24 hours</span> and we ask for
+          <span class="todo">90 days</span> before public disclosure.
+        </div>
+      </section>
+
+      <!-- 02 BEFORE YOU WRITE -->
+      <section id="before">
+        <h2><span class="sec-no">02</span>Before you write in</h2>
+        <p>
+          Including these turns a two-day back-and-forth into a single reply. You'll find all of
+          them in <span class="todo">Settings &rsaquo; About</span>.
+        </p>
+        <ul>
+          <li><strong>AVTool version</strong> and build number.</li>
+          <li><strong>Device and iOS version</strong> &mdash; for example, iPhone 15 Pro on iOS 18.2.</li>
+          <li><strong>What you did</strong>, step by step, right before the problem.</li>
+          <li><strong>What you expected</strong> versus what actually happened.</li>
+          <li><strong>A screenshot or screen recording</strong>, if the problem is visual.</li>
+        </ul>
+        <p class="text-muted" style="font-size:.9375rem;">
+          Please don't send passwords, API keys, or credentials of any kind. We will never ask
+          for them, and anyone who does is not us.
+        </p>
+      </section>
+
+      <!-- 03 FAQ -->
+      <section id="faq">
+        <h2><span class="sec-no">03</span>Frequently asked</h2>
+
+        <div class="accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                How do I delete my account?
+              </button>
+            </h3>
+            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <p class="todo">
+                  Open Settings &rsaquo; Account &rsaquo; Delete Account and confirm. This removes
+                  your account from our servers, not just from this device, and it cannot be undone.
+                </p>
+                <p class="mb-0">
+                  Anything we're required to keep for legal or tax reasons is described in our
+                  <a href="/avtool/privacy#retention">retention policy</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                How do I get a copy of my data?
+              </button>
+            </h3>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Email <a href="mailto:privacy@ocybersecurity.com">privacy@ocybersecurity.com</a>
+                from the address on your account. We'll send a portable export within
+                <span class="todo">30 days</span>, usually much sooner. There's no charge.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                Can I turn off analytics?
+              </button>
+            </h3>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes &mdash; <span class="todo">Settings &rsaquo; Privacy</span>. AVTool's analytics
+                are first-party only: they go to our servers, never to an advertising network or
+                data broker. We don't track you across other companies' apps or websites.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+                How do I restore a purchase on a new device?
+              </button>
+            </h3>
+            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <span class="todo">
+                  Sign in with the same Apple Account used for the original purchase, then open
+                  Settings &rsaquo; Restore Purchases. Purchases are tied to your Apple Account,
+                  not to a device.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
+                How do I cancel a subscription?
+              </button>
+            </h3>
+            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Subscriptions are billed by Apple, so they're cancelled through Apple &mdash; open
+                the Settings app, tap your name, then Subscriptions, and select AVTool. We can't
+                cancel or refund on your behalf; refund requests go through
+                <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6">
+                Does AVTool work offline?
+              </button>
+            </h3>
+            <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body todo">
+                [Describe what works without a connection and what requires one.]
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 04 TROUBLESHOOTING -->
+      <section id="troubleshooting">
+        <h2><span class="sec-no">04</span>Troubleshooting</h2>
+
+        <h3>The app crashes on launch</h3>
+        <ol>
+          <li>Force quit AVTool: swipe up from the bottom of the screen and swipe the app away.</li>
+          <li>Restart the device.</li>
+          <li>Check for an AVTool update in the App Store &mdash; the fix may already be shipped.</li>
+          <li>If it persists, delete and reinstall. <strong>Note:</strong>
+              <span class="todo">local data not yet synced will be lost.</span></li>
+        </ol>
+
+        <h3>I can't sign in</h3>
+        <ol>
+          <li>Confirm the email address, including its domain.</li>
+          <li>Use the reset link on the sign-in screen; the email arrives within a few minutes.</li>
+          <li>Check spam and any corporate mail filtering.</li>
+          <li>On a managed or corporate network, confirm outbound HTTPS to
+              <span class="todo">our API domain</span> isn't blocked.</li>
+        </ol>
+
+        <h3>Something looks wrong or out of date</h3>
+        <ol>
+          <li>Pull to refresh on the affected screen.</li>
+          <li>Confirm the device has a working connection.</li>
+          <li>Sign out and back in to force a fresh sync.</li>
+        </ol>
+
+        <div class="callout">
+          Still stuck? Send us the details from section 02 and we'll take it from there.
+        </div>
+      </section>
+
+      <!-- 05 REQUIREMENTS -->
+      <section id="requirements">
+        <h2><span class="sec-no">05</span>Requirements &amp; compatibility</h2>
+        <table class="table spec-table">
+          <tbody>
+            <tr><th scope="row">Platform</th><td class="todo">iPhone and iPad</td></tr>
+            <tr><th scope="row">Minimum OS</th><td class="todo">iOS 16.0 / iPadOS 16.0</td></tr>
+            <tr><th scope="row">Languages</th><td class="todo">English</td></tr>
+            <tr><th scope="row">Connection</th><td class="todo">Required for sync and sign-in</td></tr>
+            <tr><th scope="row">Accessibility</th><td class="todo">VoiceOver and Dynamic Type supported</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 06 LEGAL -->
+      <section id="legal">
+        <h2><span class="sec-no">06</span>Privacy &amp; terms</h2>
+        <p>
+          Our <a href="/avtool/privacy">privacy policy</a> covers what AVTool collects, why, how
+          long it's kept, and how to have it removed. Terms of service are
+          <a href="/terms">here</a>.
+        </p>
+        <p class="mb-0">
+          AVTool is published by Intellicue, Orlando, Florida, United States.
+        </p>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="py-4 mt-5">
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <span>&copy; 2026 Intellicue. All rights reserved.</span>
+    <span>
+      <a href="/terms">Terms</a> &middot;
+      <a href="/avtool/privacy">Privacy</a> &middot;
+      <a href="/avtoolsupport.html">Support</a>
+    </span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
