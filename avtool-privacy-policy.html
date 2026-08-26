@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AVTool Privacy Policy | Intellicue</title>
+<meta name="description" content="How AVTool collects, uses, stores, and protects your information.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ocybersecurity.com/avtool/privacy">
+
+<!-- Bootstrap 5.3 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#101820;
+    --ink-2:#1d2833;
+    --paper:#fbfaf7;
+    --rule:#dcd8d0;
+    --muted:#5b6670;
+    --signal:#b8860b;      /* brass — used only for markers and links on dark */
+    --signal-soft:#fdf6e3;
+    --flag:#fff3cd;        /* highlight for TODO content you must confirm */
+  }
+
+  body{
+    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-size:1.0625rem;
+    line-height:1.7;
+  }
+
+  /* ---------- header band ---------- */
+  .doc-head{ background:var(--ink); color:#fff; }
+  .doc-eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.75rem; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--signal);
+  }
+  .doc-head h1{ font-weight:700; letter-spacing:-.02em; }
+  .doc-meta{
+    font-family:"IBM Plex Mono",monospace; font-size:.8125rem;
+    color:#9aa5ae; border-top:1px solid #2b3742; padding-top:1rem;
+  }
+  .doc-meta strong{ color:#fff; font-weight:500; }
+
+  /* ---------- sidebar table of contents ---------- */
+  .toc{ position:sticky; top:2rem; }
+  .toc .nav-link{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.8125rem; color:var(--muted);
+    padding:.3rem 0 .3rem .875rem;
+    border-left:2px solid var(--rule);
+    border-radius:0;
+  }
+  .toc .nav-link:hover{ color:var(--ink); }
+  .toc .nav-link.active{
+    color:var(--ink); font-weight:500;
+    border-left-color:var(--signal); background:transparent;
+  }
+
+  /* ---------- body sections ---------- */
+  .doc-body section{ scroll-margin-top:1.5rem; padding-bottom:2.5rem; }
+  .doc-body h2{
+    font-size:1.375rem; font-weight:600; letter-spacing:-.01em;
+    padding-bottom:.5rem; margin-bottom:1rem;
+    border-bottom:1px solid var(--rule);
+  }
+  .doc-body h2 .sec-no{
+    font-family:"IBM Plex Mono",monospace; font-size:.875rem;
+    color:var(--signal); margin-right:.6rem; font-weight:500;
+  }
+  .doc-body h3{ font-size:1.0625rem; font-weight:600; margin:1.5rem 0 .5rem; }
+  .doc-body ul{ padding-left:1.15rem; }
+  .doc-body li{ margin-bottom:.4rem; }
+
+  /* ---------- data table ---------- */
+  .table-data thead th{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); font-weight:500;
+    border-bottom:2px solid var(--ink);
+  }
+  .table-data td{ vertical-align:top; font-size:.9375rem; }
+  .table-data tbody th{ font-weight:600; font-size:.9375rem; white-space:nowrap; }
+
+  /* ---------- callouts ---------- */
+  .callout{
+    background:var(--signal-soft);
+    border-left:3px solid var(--signal);
+    padding:1rem 1.25rem; margin:1.5rem 0;
+    font-size:.9375rem;
+  }
+  /* Placeholder markers.
+     The yellow highlight is off for publication. The .todo spans remain in the
+     markup so unverified content is still greppable — search class="todo".
+     To re-enable the highlight while editing, restore:
+       background:var(--flag); padding:.05rem .3rem; border-radius:2px;
+       box-shadow:inset 0 -1px 0 rgba(0,0,0,.12);                          */
+  .todo{ background:none; padding:0; box-shadow:none; }
+  .contact-card{
+    background:#fff; border:1px solid var(--rule); border-radius:6px; padding:1.5rem;
+  }
+  .contact-card dt{ font-family:"IBM Plex Mono",monospace; font-size:.75rem;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+  .contact-card dd{ margin-bottom:1rem; }
+
+  a{ color:#0b5d8f; text-underline-offset:2px; }
+  footer{ background:var(--ink-2); color:#9aa5ae; font-size:.875rem; }
+  footer a{ color:#cbd3da; }
+
+  @media (prefers-reduced-motion:reduce){ *{ scroll-behavior:auto !important; } }
+</style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#toc" data-bs-offset="80" tabindex="0">
+
+<!-- ==================== HEADER ==================== -->
+<header class="doc-head py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <p class="doc-eyebrow mb-2">AVTool &middot; Legal</p>
+        <h1 class="display-6 mb-3">Privacy Policy</h1>
+        <p class="lead text-white-50 mb-4" style="max-width:44rem;">
+          What AVTool collects, why it collects it, how long it is kept, and what you can
+          ask us to do with it.
+        </p>
+        <div class="doc-meta row g-3">
+          <div class="col-sm-4">Effective <strong>26 August 2026</strong></div>
+          <div class="col-sm-4">Last updated <strong>26 August 2026</strong></div>
+          <div class="col-sm-4">Version <strong>1.0</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== BODY ==================== -->
+<main class="container my-5">
+  <div class="row g-5">
+
+    <!-- Table of contents -->
+    <div class="col-lg-3 d-none d-lg-block">
+      <nav id="toc" class="toc">
+        <p class="doc-eyebrow text-dark mb-3">Contents</p>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="#scope">Scope</a>
+          <a class="nav-link" href="#collect">Data we collect</a>
+          <a class="nav-link" href="#use">How we use it</a>
+          <a class="nav-link" href="#legal-basis">Legal basis</a>
+          <a class="nav-link" href="#sharing">Sharing</a>
+          <a class="nav-link" href="#retention">Retention</a>
+          <a class="nav-link" href="#security">Security</a>
+          <a class="nav-link" href="#rights">Your rights</a>
+          <a class="nav-link" href="#children">Children</a>
+          <a class="nav-link" href="#transfers">Transfers</a>
+          <a class="nav-link" href="#changes">Changes</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </nav>
+    </div>
+
+    <!-- Content -->
+    <div class="col-lg-9 doc-body">
+
+      <!-- 01 -->
+      <section id="scope">
+        <h2><span class="sec-no">01</span>Scope</h2>
+        <p>
+          This policy covers <strong>AVTool</strong>, the
+          <span class="todo">iOS application and companion web dashboard</span> published by
+          <strong>Intellicue</strong> ("we", "us"). It explains how we handle
+          information about people who install, sign in to, or use AVTool.
+        </p>
+        <p>
+          It does not cover third-party services you reach through AVTool. When you follow a
+          link out of the app, the receiving service's own policy applies.
+        </p>
+      </section>
+
+      <!-- 02 -->
+      <section id="collect">
+        <h2><span class="sec-no">02</span>Data we collect</h2>
+        <p>
+          The table below is written to line up with the categories Apple uses on the App Store
+          product page, so the two disclosures stay consistent. Update both together.
+        </p>
+
+        <div class="table-responsive">
+          <table class="table table-data align-middle">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">What specifically</th>
+                <th scope="col">Why</th>
+                <th scope="col">Linked to you</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Account</th>
+                <td class="todo">Email address, display name, hashed password</td>
+                <td>Create and secure your account; send service notices</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <th scope="row">Usage</th>
+                <td class="todo">Feature interactions, session length, screen views</td>
+                <td>Diagnose problems and prioritise development</td>
+                <td>Not used for tracking</td>
+              </tr>
+              <tr>
+                <th scope="row">Diagnostics</th>
+                <td class="todo">Crash reports, device model, OS version</td>
+                <td>Fix crashes and compatibility failures</td>
+                <td class="todo">No</td>
+              </tr>
+              <tr>
+                <th scope="row">Content you provide</th>
+                <td class="todo">Files, scans, or configurations you submit to the app</td>
+                <td>Deliver the feature you asked for</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <th scope="row">Identifiers</th>
+                <td class="todo">Device identifier for vendor (IDFV)</td>
+                <td>Link a licence to a device</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>How we collect it</h3>
+        <ul>
+          <li><strong>You give it to us</strong> &mdash; when you create an account, contact
+              support, or enter content into the app.</li>
+          <li><strong>Automatically from the app</strong> &mdash; through our own instrumentation
+              as you use features. We do not embed third-party analytics or advertising SDKs.</li>
+          <li><strong>From Apple</strong> &mdash; purchase and subscription status through
+              StoreKit, and crash reports if you have opted in to sharing them with developers.</li>
+        </ul>
+
+        <h3>Tracking</h3>
+        <p>
+          AVTool collects usage analytics, but it does not track you. Tracking has a specific
+          meaning here: linking your data with data collected about you by other companies' apps
+          or websites for advertising or advertising measurement, or sharing your data with data
+          brokers. We do none of that.
+        </p>
+        <p>
+          Our analytics are first-party. Events are recorded by our own instrumentation and sent
+          to servers we control. They are not passed to an advertising network, an attribution
+          service, or any other third party. AVTool does not access the Advertising Identifier
+          (IDFA), and for that reason does not present the App Tracking Transparency prompt.
+        </p>
+
+        <h3>What we do not collect</h3>
+        <ul>
+          <li>We do not collect precise location.</li>
+          <li>We do not use the Advertising Identifier (IDFA) and we do not track you across
+              other companies' apps or websites.</li>
+          <li>We do not sell or share personal information for cross-context behavioural
+              advertising as those terms are defined under California law.</li>
+        </ul>
+        <p class="text-muted" style="font-size:.9375rem;">
+          <span class="todo">Delete any line above that is not true of AVTool.</span>
+        </p>
+      </section>
+
+      <!-- 03 -->
+      <section id="use">
+        <h2><span class="sec-no">03</span>How we use it</h2>
+        <ul>
+          <li><strong>Run the service.</strong> Authenticate you, sync settings, deliver the
+              features you request.</li>
+          <li><strong>Keep it working.</strong> Investigate crashes, errors, and performance
+              regressions.</li>
+          <li><strong>Keep it safe.</strong> Detect abuse, fraud, and unauthorised access
+              attempts.</li>
+          <li><strong>Support.</strong> Respond when you contact us, using the context you
+              give us.</li>
+          <li><strong>Legal obligations.</strong> Meet tax, accounting, and lawful-request
+              requirements.</li>
+        </ul>
+        <p>We do not use your content to train machine learning models.
+           <span class="todo">Remove this sentence if it is not accurate.</span></p>
+      </section>
+
+      <!-- 04 -->
+      <section id="legal-basis">
+        <h2><span class="sec-no">04</span>Legal basis (UK &amp; EU users)</h2>
+        <p>Where the UK GDPR or EU GDPR applies, we rely on:</p>
+        <ul>
+          <li><strong>Contract</strong> &mdash; to provide AVTool once you have an account.</li>
+          <li><strong>Legitimate interests</strong> &mdash; to secure the service, prevent abuse,
+              and improve reliability, balanced against your rights.</li>
+          <li><strong>Consent</strong> &mdash; for optional analytics and any marketing email.
+              You can withdraw consent at any time in
+              <span class="todo">Settings &rsaquo; Privacy</span>.</li>
+          <li><strong>Legal obligation</strong> &mdash; where retention or disclosure is required
+              by law.</li>
+        </ul>
+      </section>
+
+      <!-- 05 -->
+      <section id="sharing">
+        <h2><span class="sec-no">05</span>Who we share it with</h2>
+        <p>
+          We share personal data only with processors acting on our instructions, and only as
+          needed to run AVTool.
+        </p>
+        <div class="table-responsive">
+          <table class="table table-data">
+            <thead>
+              <tr><th scope="col">Provider</th><th scope="col">Purpose</th><th scope="col">Region</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="todo">Apple</td><td>App distribution, in-app purchases, crash reporting</td><td>US / EU</td></tr>
+              <tr><td class="todo">[Cloud host]</td><td>Application and database hosting</td><td class="todo">US</td></tr>
+              <tr><td class="todo">[Email provider]</td><td>Transactional email</td><td class="todo">US</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Equal protection commitment</h3>
+        <p>
+          Every third party with whom we share user data &mdash; including analytics tools,
+          advertising networks, third-party SDKs, and any parent, subsidiary, or other related
+          entity that has access to user data &mdash; is contractually required to provide the
+          same or equal protection of user data as stated in this policy. We do not permit them
+          to use your data for their own purposes.
+        </p>
+
+        <h3>Third-party AI services</h3>
+        <p class="todo">
+          AVTool does not send your personal data to any third-party AI or machine learning
+          service. [If it does: name the provider, state exactly what is sent, and describe the
+          in-app consent prompt shown before the first transmission. Apple requires explicit
+          permission before personal data goes to third-party AI.]
+        </p>
+
+        <p>
+          We may also disclose information where required by valid legal process, or in
+          connection with a merger or acquisition &mdash; in which case we will notify you before
+          your data becomes subject to a different policy.
+        </p>
+      </section>
+
+      <!-- 06 -->
+      <section id="retention">
+        <h2><span class="sec-no">06</span>How long we keep it</h2>
+        <ul>
+          <li>Account data: for as long as your account is active, then
+              <span class="todo">30 days</span> after deletion.</li>
+          <li>Diagnostic and crash data: <span class="todo">90 days</span>.</li>
+          <li>Aggregate usage statistics: retained indefinitely in a form that cannot identify
+              you.</li>
+          <li>Billing records: <span class="todo">7 years</span>, as required for tax purposes.</li>
+        </ul>
+      </section>
+
+      <!-- 07 -->
+      <section id="security">
+        <h2><span class="sec-no">07</span>Security</h2>
+        <p>
+          Data in transit is protected with TLS 1.2 or higher. Data at rest on our servers is
+          encrypted with <span class="todo">AES-256</span>. On device, credentials are stored in
+          the iOS Keychain and application files use iOS Data Protection.
+        </p>
+        <h3>Encryption and export compliance</h3>
+        <p>
+          AVTool uses <span class="todo">only the standard encryption provided by the operating
+          system and by HTTPS</span>. It contains no proprietary or non-standard cryptography.
+          This declaration corresponds to the export-compliance answer filed with Apple; if the
+          app's cryptography changes, both must be updated.
+        </p>
+        <p>
+          No system is perfectly secure. If we become aware of a breach affecting your personal
+          data, we will notify affected users and the relevant supervisory authority within the
+          timeframes the law requires.
+        </p>
+      </section>
+
+      <!-- 08 -->
+      <section id="rights">
+        <h2><span class="sec-no">08</span>Your rights</h2>
+        <p>Depending on where you live, you can ask us to:</p>
+        <ul>
+          <li>Give you a copy of the personal data we hold about you.</li>
+          <li>Correct data that is wrong or incomplete.</li>
+          <li>Delete your account and associated data.</li>
+          <li>Export your data in a portable format.</li>
+          <li>Restrict or object to certain processing.</li>
+          <li>Withdraw consent you previously gave.</li>
+        </ul>
+        <h3>Deleting your account from inside the app</h3>
+        <p>
+          If you created an account in AVTool, you can delete it and the data associated with it
+          without contacting us. Open
+          <span class="todo">Settings &rsaquo; Account &rsaquo; Delete Account</span> in the app
+          and confirm. Deletion removes your account from our servers, not only from your device.
+          Anything we must keep for legal reasons is listed in section 06.
+        </p>
+
+        <h3>Withdrawing consent</h3>
+        <p>
+          Optional analytics can be turned off at any time in
+          <span class="todo">Settings &rsaquo; Privacy</span>. Turning it off stops future
+          collection; to remove what was already collected, use the deletion request below.
+        </p>
+
+        <p>
+          Send requests to <a href="mailto:privacy@ocybersecurity.com">privacy@ocybersecurity.com</a>.
+          We respond within <span class="todo">30 days</span> and will not charge you or degrade
+          your service for exercising a right.
+        </p>
+        <p>
+          UK and EU users may also complain to their data protection authority. California
+          residents may designate an authorised agent to make a request on their behalf.
+        </p>
+      </section>
+
+      <!-- 09 -->
+      <section id="children">
+        <h2><span class="sec-no">09</span>Children</h2>
+        <p>
+          AVTool is not directed to children under <span class="todo">13</span> and we do not
+          knowingly collect their personal information. If you believe a child has given us
+          data, contact us and we will delete it.
+        </p>
+      </section>
+
+      <!-- 10 -->
+      <section id="transfers">
+        <h2><span class="sec-no">10</span>International transfers</h2>
+        <p>
+          We operate from <span class="todo">the United States</span>. If you use AVTool from
+          outside that region, your data is transferred there. For transfers from the UK or EEA
+          we rely on the European Commission's Standard Contractual Clauses and the UK Addendum,
+          together with additional technical safeguards.
+        </p>
+      </section>
+
+      <!-- 11 -->
+      <section id="changes">
+        <h2><span class="sec-no">11</span>Changes to this policy</h2>
+        <p>
+          When we make a material change we will update the effective date above and notify you
+          in the app or by email before the change takes effect. Continued use after that date
+          means you accept the updated policy.
+        </p>
+      </section>
+
+      <!-- 12 -->
+      <section id="contact">
+        <h2><span class="sec-no">12</span>Contact</h2>
+        <div class="contact-card">
+          <dl class="mb-0">
+            <dt>Controller</dt>
+            <dd class="mb-3">Intellicue<br>Orlando, Florida, United States</dd>
+            <dt>Privacy enquiries</dt>
+            <dd class="mb-3"><a href="mailto:privacy@ocybersecurity.com">privacy@ocybersecurity.com</a></dd>
+            <dt>Security reports</dt>
+            <dd class="mb-0"><a href="mailto:security@ocybersecurity.com">security@ocybersecurity.com</a></dd>
+          </dl>
+        </div>
+      </section>
+
+      <p class="mt-4 mb-0">
+        <a href="#" class="text-decoration-none" style="font-family:'IBM Plex Mono',monospace;font-size:.8125rem;">&uarr; Back to top</a>
+      </p>
+
+    </div>
+  </div>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="py-4 mt-5">
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <span>&copy; 2026 Intellicue. All rights reserved.</span>
+    <span>
+      <a href="/terms">Terms</a> &middot;
+      <a href="/avtool/privacy">Privacy</a> &middot;
+      <a href="/contact">Contact</a>
+    </span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
